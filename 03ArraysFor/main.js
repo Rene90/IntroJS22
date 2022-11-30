@@ -61,3 +61,105 @@ console.log(palabras)
 var oracion2 = "rene.manzano@hotmail.com"
 var nombreso = oracion2.split('@')
 console.log(nombreso[0])
+var arreglo2d= [["Juan","Pablo"],["Rene","Roberto"]]
+console.log(arreglo2d[0]) //me trae el primer arreglo
+console.log(arreglo2d[0][0])//Me trae a Juan que es el primer elemento del primer arreglo
+console.log(arreglo2d[1][1])//los arreglos de arreglos en dos dimensiones tambien se llaman matrices
+//CICLOS
+//Son lineas de codigo que se repiten determinada cantidad de veces
+
+/*console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)*/ //Esta manera NO ES VIABLE
+
+//for (contador se llama i por convencion) principio,fin,paso
+for(let i= 0;i<alumnosUnidos.length;i++){
+    //console.log(i)
+    console.log(alumnosUnidos[i])
+}
+console.log("IMPRIMIENDO ALUMNOS PAR")
+for(let i= 0;i<alumnosUnidos.length;i=i+2){//Imprime los alumnos en la posicion par
+    //console.log(i)
+    console.log(alumnosUnidos[i])
+}
+console.log("IMPRIMIENDO ALUMNOS DE REVERSA")
+for(let i=alumnosUnidos.length-1;i>=0;i--){
+    console.log(alumnosUnidos[i])
+}
+var calificaciones = [6,8,9,10,5,9,9,6.5,7,8]
+var calificaciones2 = [7,10,9,10,4,4,9,10,8.7,6.2,7,4,10,10]
+var grupos = [calificaciones,calificaciones2]
+var sumatoria = 0
+/*for(let i=0;i<calificaciones.length;i++){
+    sumatoria = sumatoria +calificaciones[i]
+}
+var promedio = sumatoria/calificaciones.length
+console.log(promedio)*/
+var numElementos= 0
+
+for(let i=0;i<grupos.length;i++){
+    
+    for(let j=0;j<grupos[i].length;j++){
+        sumatoria = sumatoria + grupos[i][j]
+        numElementos++
+    }
+    
+}
+var promedioGeneral = sumatoria/numElementos
+console.log(promedioGeneral)
+//Metodos funcionales
+//otra manera de recorrer un arreglo es con su metodo funcional forEach
+
+calificaciones2.forEach((elemento,indices,arreglo)=>{
+    console.log(elemento)
+    
+})
+
+//Ciclo while
+var contadorWhile=0
+while(contadorWhile<5){
+    console.log(contadorWhile)
+    contadorWhile++
+}
+
+// RETO 1 PLATILLOS
+// Crea un arreglo que contenga los siguientes platillos:
+// 1) Enchiladas
+// 2) Taco
+// 3) Tamal
+// 4) Pozole
+// 5) Barbacoa
+// 6) Guacamole
+//
+// 1. Mediante un ciclo FOR, muestra todos los platillos (recuerda la propiedad length)
+// 2. Mediante un ciclo FOR y condicional IF, muestra sólo el Pozole y la Barbacoa
+// 3. Mediante un ciclo FOR y conficional IF, muestra sólo los elementos impares
+// 4. Mediante únicamente un ciclo FOR, muestra los elementos que sean pares
+
+
+//RETO 2 FIZZBUZZ
+// Mostrar en consola los números del 1 al 100
+// Si el numero es divisible entre 3 imprimir Fizz
+// Si el numero es divisible entre 5 imprimir Buzz
+// Si el numero es divisible entre 3 y 5 imprimir FizzBuzz
+// (Recuerda el uso del operador módulo %)
+//---- 👍 -----
+// 1
+// 2
+// 3 Fizz
+// 4
+// 5 Buzz
+// ...
+// 15 FizzBuzz
+//----- 🚫 -----
+// 15 fizz
+// 15 buzz
+// 15 fizzbuzz
+
+
+
+
+
+
